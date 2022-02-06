@@ -5,7 +5,7 @@
     <h2>Addition of tasks</h2>
     <form  action="{% url 'tasks:add' %}" method="post">
         {% csrf_token %} 
-        <input type="text" name="task">
+        {{form}}
         <input type="submit">
     </form>
     <a href="{% url 'tasks:index' %}">Click me to display the list of tasks!</a>
